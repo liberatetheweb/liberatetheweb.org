@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Финансы"
+---
+<div class="sixteen columns">
+  <p>Все пожертвования принимаются в криптовалютах <a href="http://bitcoin.org">Bitcoin</a> и <a href="http://litecoin.org">Litecoin</a>. Все остальные валюты подключены через обменник и мгновенно конвертируются в Bitcoin. Эти криптовалюты устроены так, что вся история транзакций открыта. Вы можете посмотреть все транзакции, прошедшие через наши кошельки <a href="https://blockexplorer.com/address/{{ site.btc }}">тут</a> и <a href="http://explorer.litecoin.net/address/{{ site.ltc }}">тут</a>. На этой странице будут описаны наши расходы.</p>
+  <table class="zebra-striped">
+    <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Валюта</th>
+        <th>Сумма</th>
+        <th>Комментарий</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include finance.html %}
+    </tbody>
+  </table>
+</div>

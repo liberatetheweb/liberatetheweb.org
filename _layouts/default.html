@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% if page.lang == "en" %}
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+{% else %}
+<!--[if lt IE 7 ]><html class="ie ie6" lang="ru"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="ru"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="ru"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+{% endif %}
+<head>
+
+	<meta charset="utf-8">
+	<title>{{ page.title }} — {{ site.name }}</title>
+	<meta name="description" content="">
+	<meta name="author" content="Liberate the Web">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {% if page.lang == "en" %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.en.xml">
+  {% else %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.ru.xml">
+  {% endif %}
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/tables.css">
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--[if lt IE 9]>
+		<script src="/js/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="container">
+		<nav>
+    {% if page.lang == "en" %}
+      <a href="/en">Home</a>
+      <a href="/en/projects">Projects</a>
+      <a href="/en/blog">Blog</a>
+      <a href="https://github.com/liberatetheweb">Github</a>
+      <a href="/en/contacts">Contacts</a>
+      <a href="/en/donate">Donate</a>
+      <a href="/" class="lang">Русский</a>
+    {% else %}
+      <a href="/">Главная</a>
+      <a href="/projects">Проекты</a>
+      <a href="/blog">Блог</a>
+      <a href="https://github.com/liberatetheweb">Github</a>
+      <a href="/contacts">Контакты</a>
+      <a href="/donate">Помочь</a>
+      <a href="/en" class="lang">English</a>
+    {% endif %}
+		</nav>
+
+		<div class="sixteen columns">
+    {% if page.lang == "en" %}
+			<h1 class="remove-bottom logo"><a href="/en">{{ site.name }}</a><small>/{{ page.title }}</small></h1>
+			<h5>Defends your right to stay anonymous</h5>
+    {% else %}
+			<h1 class="remove-bottom logo"><a href="/">{{ site.name }}</a><small>/{{ page.title }}</small></h1>
+			<h5>Защищая ваше право оставаться анонимным</h5>
+    {% endif %}
+			<hr />
+		</div>
+		{{ content }}
+		<footer class="sixteen columns">
+		    <hr />
+			<p><a href="https://creativecommons.org/licenses/by/3.0/" rel="license">Creative Commons Attribution 3.0</a></p>
+	    </footer>
+	</div>
+</body>
+</html>

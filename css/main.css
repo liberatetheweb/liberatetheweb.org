@@ -1,0 +1,32 @@
+footer {
+	text-align:center;
+}
+.logo {
+	margin-top:20px;
+}
+.logo > a {
+	text-decoration: none;
+}
+nav > a {
+  height: 24px;
+	width: 90px;
+	text-align: center;
+	font-size: 16px;
+	display: inline-block;
+	border: 1px solid;
+	text-decoration: none;
+	float: left;
+}
+.lang {
+	float: right;
+}
+small {
+	font-size:22pt;
+	color:#808080;
+}
+.project {
+	margin-bottom:30px;
+}
+.bloglist {
+  text-align:center;
+}

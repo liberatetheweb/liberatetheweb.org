@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Finance"
+lang: "en"
+---
+<div class="sixteen columns">
+  <p>All donations are accepting in cryptocurrencies <a href="http://bitcoin.org">Bitcoin</a> and <a href="http://litecoin.org">Litecoin</a>. All other currencies available by exchange service and convert to Bitcoin instantly. Transaction history in cryptocurrencies is open. You can check all transactions <a href="https://blockexplorer.com/address/{{ site.btc }}">here</a> and <a href="http://explorer.litecoin.net/address/{{ site.ltc }}">here</a>. That page will contain our costs.</p>
+  <table class="zebra-striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Currency</th>
+        <th>Summ</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include finance.html %}
+    </tbody>
+  </table>
+</div>

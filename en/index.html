@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Homepage"
+lang: "en"
+---
+<div class="row">
+    <div class="one-third column">
+        <h3>Who are you?</h3>
+        <p>We are group of privacy, freedom of speech and free software activists which develop new ways to save your anonymity and privacy.</p>
+    </div>
+    <div class="one-third column">
+        <h3>What is you do?</h3>
+        <p>We are working on several projects. You can learn more about our work on <a href="projects">projects</a> page or on our <a href="https://github.com/liberatetheweb">Github account</a>.</p>
+    </div>
+    <div class="one-third column">
+        <h3>Why are you doing this?</h3>
+        <p>We belive that freedom of speech can be protected only with a modern technologies and strong cryptography.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="one-third column">
+        <h3>How I can help you?</h3>
+        <p>Every help is welcome. You can <a href="donate">donate</a> or help us with our <a href="projects">projects</a>. And, of course, you can spread information about
+our work.</a>
+    </div>
+    <div class="one-third column">
+        <h3>How I can control your financial spending?</h3>
+        <p>We believe that transparency is awesome. Thats why we provide all information about our spends and income. You can view it <a href="finance">here</a>.</p>
+    </div>
+    <div class="one-third column">
+    	<h3>Blog</h3>
+    	<ul class="posts">
+    		{% for post in site.categories.english limit: 5 %}
+    			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    		{% endfor %}
+    	</ul>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Мы начинаем"
+date:   2013-08-01 00:00:00
+categories: russian
+---
+
+Liberate the Web начинает свою работу.
