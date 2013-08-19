@@ -7,6 +7,9 @@ footer {
 .logo > a {
 	text-decoration: none;
 }
+.logo > a > img {
+  margin-right: -10px;
+}
 nav > a {
   height: 24px;
 	width: 90px;
